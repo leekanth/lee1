@@ -1,0 +1,19 @@
+
+<html lang="en-US">
+<head >
+	<script src="angular.min.js"></script>
+	<script src="script14.js"></script>
+    <script src="filters.js"></script>
+	<link href="style.css" rel="stylesheet"/>
+</head>
+<body ng-app="test">			<!--angular view-->
+	
+<div ng-controller="myapp">
+		Select View: <select ng-model="v">
+		<option value="table1.html">Table</option>
+		<option value="list.html">list</option>
+		</select>
+		<div ng-include = "v">
+</div>	
+</body>
+</html>

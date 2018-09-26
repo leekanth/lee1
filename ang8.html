@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head >
+	<script src="angular.min.js"></script>
+	<script src="script8.js"></script>
+	<link href="style.css" rel="stylesheet"/>
+</head>
+<body ng-app="test", ng-controller="myapp">			<!--angular view-->
+
+		<div>
+		Rows to Display:<input type="number" step="1" min="0" max="4" ng-model="rowlimit"/>
+		<br/><br/>
+		Sort by: <select ng-model="sortColumn">
+					<option value="Name"> name Asc</option>
+					<option value="Gender"> gender Asc</option>
+					<option value="DOB">DOB Asc</option>
+					<option value="-Salary"> Salary Desc</option>
+					</select>
+		<br/><br/>
+		Search:<input type="text" placeholder="search Name" ng-model="searchText.Name"/>
+		Search:<input type="text" placeholder="search DOB" ng-model="searchText.DOB"/>
+		Search:<input type="checkbox" ng-model="exactMatch"/> Exact Match
+		<br/><br/>
+		<table>
+				<thead>
+					<tr>
+						<th ng-click="sortData('Name')">Name <div ng-class="getsortclass('Name')"></div></th>
+						<th ng-click="sortData('DOB')">DOB <div ng-class="getsortclass('DOB')"></div></th>
+						<th ng-click="sortData('Gender')">Gender <div ng-class="getsortclass('Gender')"></div></th>
+						<th ng-click="sortData('Salary')">Salary(number)<div ng-class="getsortclass('Salary')"></div></th>
+						<th ng-click="sortData('Salary')">Salary(currency) <div ng-class="getsortclass('Salary')"></div></th>
+						
+					</tr>
+				</thead>
+					<tbody>
+						<tr ng-repeat="x in people | limitTo:rowlimit | orderBy:sortColumn | orderBy:sortColumn:reverseSort | filter:searchText:exactMatch">
+						
+						<td>{{x.Name | uppercase}}</td>
+						<td>{{x.DOB | date:"dd/MM/yyyy"}}</td>
+						<td>{{x.Gender | lowercase}}</td>
+						<td>{{x.Salary | number:2}}</td>
+						<td>{{x.Salary | currency}}</td>
+						</tr>
+				</tbody>
+				</table>
+</div>	
+</body>
+</html>

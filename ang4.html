@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head >
+	<script src="angular.min.js"></script>
+	<script src="script4.js"></script>
+</head>
+<body ng-app="test", ng-controller="myapp">			<!--angular view-->
+
+		<div>
+		<table>
+		<tr>
+		<td>First Name is</td>
+			<td><input type="text" ng-model="employee.firstname"/>
+			</td>
+		</tr>
+		<tr>
+		<td>last Name is</td>
+			<td><input type="text" ng-model="employee.lastname"/>
+			</td>
+		</tr>
+		<tr>
+		<td>gender is</td>
+			<td><input type="text" ng-model="employee.gender"/>
+			</td>
+		</tr>
+<br>
+		</table>	
+		
+			<table>	
+			<tr>
+			<td>First Name is</td>
+			<td>{{employee.firstname}}</td>	
+</tr>
+		<tr>
+			<td>last Name is</td>
+			<td>{{employee.lastname}}</td>
+</tr>	
+			<tr>
+			<td>gender is</td>
+			<td>{{employee.gender}}</td>	
+</tr>
+		</div>
+		</table>	
+</body>
+</html>

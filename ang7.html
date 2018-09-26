@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head >
+	<script src="angular.min.js"></script>
+	<script src="script7.js"></script>
+	<link href="style.css" rel="stylesheet"/>
+</head>
+<body ng-app="test", ng-controller="myapp">			<!--angular view-->
+
+		<div>
+		<table>
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>likes</th>
+						<th>Dislike</th>
+						<th>Likes/Dislike</th>
+					</tr>
+				</thead>
+					<tbody>
+						<tr ng-repeat="x in people">
+						<td>{{x.name}}</td>
+						<td>{{x.likes}}</td>
+						<td>{{x.dislikes}}</td>
+						<td><input type="button" value="like" ng-click="ilikes(x)">
+						<input type="button" value="Dislikes" ng-click="idlikes(x)"></td>
+					</tr>
+				</tbody>
+		
+		
+		</table>
+</div>	
+</body>
+</html>

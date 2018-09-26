@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="angular.min.js"></script>
+<script>
+
+<body>
+
+<div ng-app="" ng-init="kalyan='angular'">
+welcome leela ur bro is <span ng-bind='kalyan'></span>.
+
+  <p>Name : <input type="text" ng-model="name"></p>
+  <h1>Hello {{name}}</h1>
+</div>
+
+</body>
+</html>

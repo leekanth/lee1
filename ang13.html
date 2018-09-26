@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head >
+	<script src="angular.min.js"></script>
+	<script src="script12.js"></script>
+    <script src="filters.js"></script>
+	<link href="style.css" rel="stylesheet"/>
+</head>
+<body ng-app="test">			<!--angular view-->
+	
+<div ng-controller="myapp">
+		<input type="checkbox" ng-model="z"/> Hide salary
+	<table>
+				<thead>
+					<tr>
+						<th>Name </th>
+						<th>Gender </th>
+						<!--<th ng-hide="z">Salary</th>-->	
+						<!--<th ng-show="!z">Salary</th>-->			
+					<th ng-hide="z">Salary</th>
+					<th ng-show="z">Salary</th>
+					</tr>
+					
+				</thead>
+					<tbody>
+						<tr ng-repeat="x in people">
+						
+						<td>{{x.Name}}</td>						
+						<td>{{x.Gender | gender}}</td>
+						<!--<td ng-hide="z">{{x.Salary}}</td>-->
+						<!--<td ng-show="!z">{{x.Salary}}</td>-->
+						<td ng-hide="z">{{x.Salary}}</td>
+						<td ng-show="z">$$$$$</td>
+						</tr>
+						
+				</tbody>
+				</table>
+</div>	
+</body>
+</html>

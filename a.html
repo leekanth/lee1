@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<script type= "text/javascript">
+			function loadXml()
+				{
+				if(window.XMLHttpRequest)
+					{
+						xmlhttp= new XMLHttpRequest();
+					}
+				else
+					{
+						xmlhttp= new ActiveXObject("Microsoft.XMLHTTP");
+					}
+					xmlhttp.open("GET","b.xml",false);
+					xmlhttp.send();
+					xmldoc=xmlhttp.responseXML;
+					document.write(xmldoc.getElementsByTagName("price")[0].childNodes[0].nodeValue);
+
+					}
+			</script>
+	</head>
+	<body onload= "loadXml()">
+	</body>
+</html> 

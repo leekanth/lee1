@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head >
+	<script src="angular.min.js"></script>
+	<script src="script11.js"></script>
+	<link href="style.css" rel="stylesheet"/>
+</head>
+<body ng-app="test", ng-controller="myapp">			<!--angular view-->
+	
+		
+		Search:<input type="text" placeholder="search by Name " ng-model="searchText"/>
+		<br/><br/>
+		<table>
+				<thead>
+					<tr>
+						<th>Name </th>
+						<th>DOB </th>
+						<th>Gender </th>
+						<th>Salary(number)</th>
+						<th>Salary(currency) </th>
+						
+					</tr>
+				</thead>
+					<tbody>
+						<tr ng-repeat="x in people|  filter:search">
+						
+						<td>{{x.Name}}</td>
+						<td>{{x.DOB}}</td>
+						<td>{{x.Gender}}</td>
+						<td>{{x.Salary}}</td>
+						<td>{{x.Salary}}</td>
+						</tr>
+				</tbody>
+				</table>
+</div>	
+</body>
+</html>

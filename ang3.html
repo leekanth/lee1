@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<script src="angular.min.js"></script>
+<script src="script1.js"></script>
+</head>
+<body>			<!--angular view-->
+<div ng-app="test", ng-controller="myapp">
+My name is:<b>{{country.name}}</b>
+<br>
+My age is :<b>{{country.age}}</b>
+<br>
+My Image is <img ng-src="{{country.photo}}" 
+				alt="{{country.name + 'image'}}"
+				style="height : 100px; weighht : 200px"/>
+
+</div>
+
+</body>
+</html>

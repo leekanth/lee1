@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head >
+	<script src="angular.min.js"></script>
+	<script src="script12.js"></script>
+    <script src="filters.js"></script>
+	<link href="style.css" rel="stylesheet"/>
+</head>
+<body ng-app="test">			<!--angular view-->
+	
+<div ng-controller="myapp">
+	<table>
+				<thead>
+					<tr>
+						<th>Name </th>
+						<th>Gender </th>
+						<th>Salary</th>			
+					</tr>
+				</thead>
+					<tbody>
+						<tr ng-repeat="x in people">
+						
+						<td>{{x.Name}}</td>						
+						<td>{{x.Gender | gender}}</td>
+						<td>{{x.Salary}}</td>
+						
+						</tr>
+				</tbody>
+				</table>
+</div>	
+</body>
+</html>

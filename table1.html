@@ -1,0 +1,25 @@
+<table>
+				<thead>
+					<tr>
+						<th>Name </th>
+						<th>Gender </th>
+						<!--<th ng-hide="z">Salary</th>-->	
+						<!--<th ng-show="!z">Salary</th>-->			
+					<th ng-hide="z">Salary</th>
+					<th ng-show="z">Salary</th>
+					</tr>
+					
+				</thead>
+					<tbody>
+						<tr ng-repeat="x in people">
+						
+						<td>{{x.Name}}</td>						
+						<td>{{x.Gender | gender}}</td>
+						<!--<td ng-hide="z">{{x.Salary}}</td>-->
+						<!--<td ng-show="!z">{{x.Salary}}</td>-->
+						<td ng-hide="z">{{x.Salary}}</td>
+						<td ng-show="z">$$$$$</td>
+						</tr>
+						
+				</tbody>
+				</table>
